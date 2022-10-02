@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="static/css/index.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Message Board</title>
+</head>
+<center>
+    <h2>Hello,{{username}}!Leave what you want to say.</h2>
+</center><br><br>
+
+<body>
+    <form action="http://127.0.0.1:11000/index" method="post">
+        <center><textarea name="message"></textarea>
+            <br>
+            <input type="checkbox" name="private">Private
+            <input type="submit" value="upload" class="button">
+        </center>
+    </form>
+    <ul></ul>
+    <br><br>
+    <div style="position: absolute; top: 1%; right: 1%;"><a href="logout" class="button">logout</a></div>
+
+    <body>
+        <div class="wrap">
+            <!-- 留言显示区 -->
+            <ul class="mes-board">
+                {% for umsg in msg %}
+                <li class="mes-content">
+                    <h4>{{umsg[0]}}</h4>
+                    <small>{{umsg[2][:19]}}</small>
+                    <p>{{umsg[1]}}</p>
+                    <a href="delete?psg={{umsg[4]}}">delete</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</body>
+
+</html>

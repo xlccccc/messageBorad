@@ -1,0 +1,61 @@
+body {
+    background-color: #f2d9d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 100px;
+}
+
+textarea {
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 1.5em;
+    color: black;
+    width: 80%;
+    height: 400px;
+    border: 1px pink solid;
+    /* 不设置轮廓 */
+    outline: none;
+}
+
+.button {
+    text-decoration: none;
+    color: rgb(237, 239, 162);
+    line-height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgb(233, 116, 198);
+    border: none;
+}
+
+
+/*Main*/
+.wrap {
+    margin: 0 auto;
+    width: 80%;
+}
+ 
+/*mes-board*/
+.mes-board {
+    margin: 1.875em 0;
+    border: 1px solid #aaa;
+    padding: 0 .7em;
+    background-color: rgb(255, 213, 204);
+}
+.mes-board li { list-style:none;padding: .7em 0; }
+.mes-board li + li { border-top: 1px dashed #fff; }
+.mes-board h4 {
+    display: inline;
+    margin-right: 2px;
+    font-weight: 400;
+    color: #66f;
+}
+.mes-board small { color: #999; }
+.mes-board p {
+    padding: 1em 0;
+ 
+}
